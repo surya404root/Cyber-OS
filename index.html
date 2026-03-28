@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cyber-OS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Leaflet Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+<h1>Cyber-OS</h1>
+
+<!-- TERMINAL -->
+<div id="terminal"></div>
+<input id="cmd" placeholder="Enter command..." onkeydown="runCmd(event)">
+
+<div class="grid">
+
+<!-- HASH -->
+<div class="box">
+<h3>Hash Generator</h3>
+<input id="hashInput">
+<button onclick="hashText()">Generate</button>
+<p id="hashOut"></p>
+</div>
+
+<!-- PASSWORD -->
+<div class="box">
+<h3>Password Checker</h3>
+<input id="passInput" type="password">
+<button onclick="checkPass()">Check</button>
+<p id="passOut"></p>
+</div>
+
+<!-- IP -->
+<div class="box">
+<h3>IP Info</h3>
+<button onclick="getIP()">Scan</button>
+<p id="ipOut"></p>
+</div>
+
+<!-- MAP -->
+<div class="box">
+<h3>IP Location Map</h3>
+<button onclick="trackIP()">Track</button>
+<div id="map"></div>
+</div>
+
+<!-- NETWORK -->
+<div class="box">
+<h3>Network Scanner</h3>
+<button onclick="scanNetwork()">Scan</button>
+<pre id="netOut"></pre>
+</div>
+
+<!-- CRACK -->
+<div class="box">
+<h3>Password Cracker (Simulator)</h3>
+<input id="targetPass" placeholder="Enter password">
+<button onclick="crack()">Start</button>
+<p id="crackOut"></p>
+</div>
+
+<!-- AI -->
+<div class="box">
+<h3>AI Assistant</h3>
+<input id="aiInput" placeholder="Ask something..." onkeydown="aiSend(event)">
+<div id="aiChat"></div>
+</div>
+
+<!-- FILE SYSTEM -->
+<div class="box">
+<h3>File System</h3>
+<input id="fileName" placeholder="File name">
+<input id="fileContent" placeholder="Content">
+<button onclick="saveFile()">Save</button>
+<button onclick="loadFile()">Load</button>
+<p id="fileOut"></p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
